@@ -39,5 +39,5 @@ set :pty, true
 # set :ssh_options, verify_host_key: :secure
 
 set :linked_files, %w(config/database.yml config/secrets.yml)
-set :linked_files, %w(log)
+#set :linked_files, %w(log)
 
