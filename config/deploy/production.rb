@@ -59,15 +59,3 @@ server "10.0.1.4", user: "www-data", role: %w{web}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-
-
-namespace :deploy do
-  
-  before :publishing, :project_symlink
-  task :project_symlink do
-    on roles(:web) do
-      execute :ln, '-nfs', '#{release_path}/app/bin/index.php', '#{release_path}/index.php'
-    end
-  end
-  
-end
