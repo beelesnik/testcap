@@ -59,10 +59,3 @@ server "10.0.1.4", user: "www-data", role: %w{web}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-
-before "deploy:publishing", :project_download
-task :project_download do
-  on roles(:web) do
-    download! "var/log/waagent.log", "waagent.log"
-  end
-end
