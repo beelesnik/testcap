@@ -69,4 +69,10 @@ namespace :deploy do
     end
   end
   
+  on roles(:web) do
+    within '/var/log/caplog' do
+      puts capture(:head, '-n5', 'cap.log')
+    end
+  end
+  
 end
