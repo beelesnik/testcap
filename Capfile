@@ -15,10 +15,6 @@ require "capistrano/deploy"
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
-require 'sshkit'
-require 'sshkit/dsl'
-include SSHKit::DSL
-
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
