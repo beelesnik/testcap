@@ -66,7 +66,7 @@ namespace :deploy do
   before :publishing, :project_symlink
   task :project_symlink do
     on roles(:web) do
-      execute :ln, '-nfs', "#{release_path}/app/bin/index.php", "#{release_path}/index.php"
+      execute :ln, '-nfs', '#{release_path}/app/bin/index.php', '#{release_path}/index.php'
     end
   end
   
